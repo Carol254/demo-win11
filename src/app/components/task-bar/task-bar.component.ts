@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class TaskBarComponent implements OnInit {
 
-  @ViewChild('taskBar') taskBar!: ElementRef;
-  taskBarHeight: number = 44; 
+  // @ViewChild('taskBar') taskBar!: ElementRef;
+  // taskBarHeight: number = 44; 
 
   icons:any = Constants.iconPaths;
   constructor() { }

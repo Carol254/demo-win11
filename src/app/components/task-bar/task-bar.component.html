@@ -10,11 +10,23 @@
       </div> -->
       <!-- System Tray -->
       <div class="system-tray">
-        <img [src]="icons.taskbar.WIN_LOGO">
-        <img [src]="icons.taskbar.MS_STORE">
-        <img [src]="icons.common.EDGE_BROWSER">
+        <div class="icon-wrapper">
+          <img [src]="icons.taskbar.WIN_LOGO" alt="Windows" />
+          <span class="tooltip">Start</span>
+        </div>
+      
+        <div class="icon-wrapper">
+          <img [src]="icons.taskbar.MS_STORE" alt="Microsoft Store" />
+          <span class="tooltip">Microsoft Store</span>
+        </div>
+      
+        <div class="icon-wrapper">
+          <img [src]="icons.common.EDGE_BROWSER" alt="Edge" />
+          <span class="tooltip">Microsoft Edge</span>
+        </div>
       </div>
+      
     </div>
-  </div>
+</div>
   
   

@@ -40,16 +40,16 @@ export class DesktopComponent implements OnInit {
         title:'Microsoft Edge',
       },
       {
-        url:this.icons.common.EDGE_BROWSER,
-        title:'Microsoft Edge erwieu jsjdlk jsldskjfl ksdjfl skdjfl ksdjf lskjd',
+        url:this.icons.common.VS_CODE,
+        title:'Visual Studio Code',
       },
       {
-        url:this.icons.common.EDGE_BROWSER,
-        title:'Microsoft Edge',
+        url:this.icons.common.FILE_EXPLORER,
+        title:'File Explorer',
       },
       {
-        url:this.icons.common.EDGE_BROWSER,
-        title:'Microsoft Edge',
+        url:this.icons.common.CHROME,
+        title:'Google Chrome',
       }
     ]
   }

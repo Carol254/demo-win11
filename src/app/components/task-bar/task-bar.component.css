@@ -1,10 +1,80 @@
-.task-bar {
-    height: 44px;
-    display: flex;
-    align-items: center;
-    background-color: #333;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
+.task-bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 100;
+}
+
+.task-bar-contents {
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.icon-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+img {
+  height: 32px; 
+  width: 32px;
+  margin: 0 8px; 
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 10px;
+
+}
+
+img:hover {
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 4px; 
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 50px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #000;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  pointer-events: none; 
+}
+
+.icon-wrapper:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.system-tray {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; 
+  height: 100%;
+}
+

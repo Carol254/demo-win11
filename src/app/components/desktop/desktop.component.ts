@@ -34,19 +34,38 @@ export class DesktopComponent implements OnInit {
   loadShortcutIcons() {
     this.initialShortcuts = [
       {
-        id: 'edge', 
-        url: this.icons.common.EDGE_BROWSER,
-        title: 'Microsoft Edge',
+        id: 'brokers', 
+        url: this.icons.common.BROKERS,
+        title: 'Brokers',
       },
       {
-        id: 'vscode', 
-        url: this.icons.common.VS_CODE,
-        title: 'Visual Studio Code',
+        id: 'customers', 
+        url: this.icons.common.CUSTOMERS,
+        title: 'Customers',
       },
       {
-        id: 'explorer', 
-        url: this.icons.common.FILE_EXPLORER,
-        title: 'File Explorer',
+        id: 'contracts', 
+        url: this.icons.common.CONTRACTS,
+        title: 'Contracts',
+      },{
+        id: 'contacts',
+        url: this.icons.common.CONTACTS,
+        title: 'Contacts',
+      },
+      {
+        id: 'mail',
+        url: this.icons.common.MAIL,
+        title: 'Mail',
+      },
+      {
+        id: 'settings',
+        url: this.icons.common.SETTINGS,
+        title: 'Settings',
+      },
+      {
+        id: 'tickets',
+        url: this.icons.common.TICKETS,
+        title: 'Tickets'
       },
       {
         id: 'chrome',

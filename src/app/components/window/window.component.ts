@@ -1,9 +1,12 @@
-import { NgIf, NgStyle } from '@angular/common';
+import { NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { BrokersComponent } from "../brokers/brokers.component";
+import { CustomersComponent } from '../customers/customers.component';
+import { ContractsComponent } from '../contracts/contracts.component';
 
 @Component({
   selector: 'app-window',
-  imports: [NgStyle ,NgIf],
+  imports: [NgStyle, NgIf,NgSwitch, BrokersComponent,CustomersComponent, ContractsComponent,NgSwitchCase,NgSwitchDefault],
   templateUrl: './window.component.html',
   styleUrl: './window.component.css'
 })

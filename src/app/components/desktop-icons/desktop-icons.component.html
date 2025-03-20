@@ -1,7 +1,8 @@
 <div class="shortcut-icons-space-container">
   <div class="shortcut-wrapper" *ngFor="let shortcut of shortcuts" (click)="openApp(shortcut)">
     <img class="desktop-icon" [src]="shortcut.url">
-    <h5>{{ shortcut.title }}</h5>
+    <h5 class="shortcut-title">{{ shortcut.title }}</h5>
   </div>
 </div>
+
 

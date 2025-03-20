@@ -1,0 +1,16 @@
+.mail{
+    background-color:#f1f1f1 ;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    
+}
+
+.selected-recepients{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 10px 0;
+    background-color: #fff;
+}

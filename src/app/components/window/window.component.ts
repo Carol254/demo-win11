@@ -3,10 +3,11 @@ import { Component, EventEmitter, HostListener, Input, Output } from '@angular/c
 import { BrokersComponent } from "../brokers/brokers.component";
 import { CustomersComponent } from '../customers/customers.component';
 import { ContractsComponent } from '../contracts/contracts.component';
+import { MailComponent } from '../mail/mail.component';
 
 @Component({
   selector: 'app-window',
-  imports: [NgStyle, NgIf,NgSwitch, BrokersComponent,CustomersComponent, ContractsComponent,NgSwitchCase,NgSwitchDefault],
+  imports: [NgStyle, NgIf,NgSwitch, BrokersComponent,CustomersComponent, ContractsComponent,NgSwitchCase,NgSwitchDefault,MailComponent],
   templateUrl: './window.component.html',
   styleUrl: './window.component.css'
 })

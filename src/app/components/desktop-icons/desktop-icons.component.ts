@@ -1,5 +1,5 @@
 import { CommonModule, NgFor } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Constants } from '../constants';
 import { Shortcut } from '../models';
 
@@ -19,6 +19,13 @@ export class DesktopIconsComponent  implements OnInit {
       title:'Edge'
     }
   ];
+
+
+  @Output() open = new EventEmitter<any>();
+
+  openApp(shortcut: any) {
+    this.open.emit(shortcut);
+  }
 
   constructor() { }
 

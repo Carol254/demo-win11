@@ -1,7 +1,7 @@
 export const Constants = {
     iconPaths:{
       desktop:{
-        DEAULT_WALLPAPER: '/images/desktop/win-11-1.webp',
+        DEFAULT_WALLPAPER: '/images/desktop/win-11-1.webp',
       },
       taskbar:{
         WIN_LOGO: '/images/icons/windows.png',

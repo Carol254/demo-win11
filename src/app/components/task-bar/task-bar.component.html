@@ -1,13 +1,13 @@
-<!-- Task Bar -->
 <div #taskBar class="task-bar">
     <div class="task-bar-bg"></div>
     <div class="task-bar-contents">
-      <!-- Pinned Icons -->
-      <!-- <div class="pinned-icons">
-        <img [src]="icons.taskbar.WIN_LOGO">
-        <img [src]="icons.taskbar.MS_STORE">
-        <img [src]="icons.common.EDGE_BROWSER">
-      </div> -->
+ 
+      <div class="minimized-windows">
+        <button *ngFor="let window of windows" (click)="restoreWindow(window)">
+          <img [src]="window.icon" alt="{{ window.title }}" />
+        </button>
+      </div>
+
       <!-- System Tray -->
       <div class="system-tray">
         <div class="icon-wrapper">
@@ -25,6 +25,7 @@
           <span class="tooltip">Microsoft Edge</span>
         </div>
       </div>
+      
       
     </div>
 </div>

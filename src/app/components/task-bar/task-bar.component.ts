@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Constants } from '../constants';
 import { CommonModule } from '@angular/common';
 
@@ -10,19 +10,19 @@ import { CommonModule } from '@angular/common';
 })
 export class TaskBarComponent implements OnInit {
 
-  // @ViewChild('taskBar') taskBar!: ElementRef;
-  // taskBarHeight: number = 44; 
-
   icons:any = Constants.iconPaths;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  // ngAfterViewInit(): void {
-  //   if (this.taskBar) {
-  //     this.taskBar.nativeElement.style.height = `${this.taskBarHeight}px`;
-  //   }
-  // }
+
+  @Input() windows: any[] = [];
+  @Output() restore = new EventEmitter<any>();
+
+  restoreWindow(window: any) {
+    window.isMinimized = false;
+    this.restore.emit(window);
+  }
 }
 

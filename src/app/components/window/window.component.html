@@ -1,0 +1,19 @@
+<div class="window" 
+    [ngStyle]="{'top.px': positionY, 'left.px': positionX, 'width.px': width, 'height.px': height, 'z-index': window.zIndex}"
+    *ngIf="!window.isMinimized"
+    (mousedown)="focusWindow()">
+    
+    <div class="window-header" (mousedown)="startDragging($event)">
+        <span>{{ window.title }}</span>
+        <div class="window-controls">
+            <button (click)="minimizeWindow()">🗕</button>
+            <button (click)="maximizeWindow()">🗖</button>
+            <button (click)="closeWindow()">✖</button>
+        </div>
+    </div>
+
+    <div class="window-body">
+        <p>Content for {{ window.title }}</p>
+    </div>
+</div>
+

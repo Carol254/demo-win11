@@ -1,5 +1,16 @@
 <div class="desktop-container" [ngStyle]="{backgroundImage: 'url('+wallpaper+')'}">
     <!-- Icon space -->
-    <app-desktop-icons [shortcuts]="initialShortcuts"></app-desktop-icons>
-    <app-task-bar></app-task-bar>
+    <app-desktop-icons [shortcuts]="initialShortcuts" (open)="openWindow($event)"></app-desktop-icons>
+
+    <app-window *ngFor="let window of openWindows" 
+      [window]="window" 
+      (close)="closeWindow(window)"
+      (bringToFront)="bringToFront(window)"
+      (minimize)="minimizeWindow($event)"
+     >
+    </app-window>
+
+
+    <app-task-bar [windows]="getMinimizedWindows()" (restore)="restoreWindow($event)"></app-task-bar>
+
   </div>

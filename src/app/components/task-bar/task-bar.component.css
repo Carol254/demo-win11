@@ -6,7 +6,7 @@
   height: 40px;
   background-color: lightgrey;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 16px;
   z-index: 100;
@@ -77,4 +77,38 @@ img:hover {
   gap: 12px; 
   height: 100%;
 }
+
+
+.minimized-windows {
+  position: absolute;
+  left: 60%;
+  transform: translateX(-60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; 
+  height: 100%;
+}
+
+.minimized-windows button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.minimized-windows button img {
+  width: 32px;
+  height: 32px;
+}
+
+
+
 

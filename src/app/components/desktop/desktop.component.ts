@@ -31,25 +31,29 @@ export class DesktopComponent implements OnInit {
     this.loadShortcutIcons();
   }
 
-  loadShortcutIcons(){
+  loadShortcutIcons() {
     this.initialShortcuts = [
       {
-        url:this.icons.common.EDGE_BROWSER,
-        title:'Microsoft Edge',
+        id: 'edge', 
+        url: this.icons.common.EDGE_BROWSER,
+        title: 'Microsoft Edge',
       },
       {
-        url:this.icons.common.VS_CODE,
-        title:'Visual Studio Code',
+        id: 'vscode', 
+        url: this.icons.common.VS_CODE,
+        title: 'Visual Studio Code',
       },
       {
-        url:this.icons.common.FILE_EXPLORER,
-        title:'File Explorer',
+        id: 'explorer', 
+        url: this.icons.common.FILE_EXPLORER,
+        title: 'File Explorer',
       },
       {
-        url:this.icons.common.CHROME,
-        title:'Google Chrome',
+        id: 'chrome',
+        url: this.icons.common.CHROME,
+        title: 'Google Chrome',
       }
-    ]
+    ];
   }
 
   openContextMenu(){
@@ -62,17 +66,18 @@ export class DesktopComponent implements OnInit {
   
   openWindow(shortcut: any) {
     const existingWindow = this.openWindows.find(win => win.id === shortcut.id);
-    
+
     if (!existingWindow) {
-      this.openWindows.push({ 
-        id: shortcut.id, 
-        title: shortcut.title, 
-        icon: shortcut.url,  
-        zIndex: this.zIndexCounter++ 
+      this.openWindows.push({
+        id: shortcut.id,
+        title: shortcut.title,
+        icon: shortcut.url,
+        zIndex: this.zIndexCounter++,
+        isMinimized: false
       });
     } else {
       existingWindow.zIndex = this.zIndexCounter++;
-      existingWindow.isMinimized = false; 
+      existingWindow.isMinimized = false;
     }
   }
   

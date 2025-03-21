@@ -150,16 +150,20 @@
     <div class="">
         <textarea placeholder="Compose your email here..."></textarea>
     </div>
-
-    
+    <div class="d-flex justify-content-between">
+        <div #filesContainer class="file-inputs"></div>
         <div>
-            <input type="file" multiple id="attachmentInput">
-            <div class="attachments" id="attachmentList"></div>
+            <button class="add-btn" (click)="attachFiles()">+</button>
         </div>
-        <div>
-
-            <button class="add-btn">Submit</button>
-        </div>
+    </div>
     
-
+    
+    <div>
+        <input type="file" multiple id="attachmentInput">
+        <div class="attachments" id="attachmentList"></div>
+    </div>
+    <div>
+        <button class="add-btn">Submit</button>
+    </div>
+    
 </section>

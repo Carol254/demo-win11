@@ -1,6 +1,6 @@
-<section class="mail container">
+<section class="mail container my-5">
     <div class="mail-header">
-        <label class="fs-10">Email to</label>
+        <label class="fs-10 fw-bold">Email to</label>
         <select  style="width: 100%; height: 30px;">
             <option value="0"></option>
             <option value="1">Intermediary</option>
@@ -10,7 +10,7 @@
     </div>
     <hr class="thick-border">
     <div>
-        <h5>Selected recepients</h5>
+        <h6 class="fw-bold">Selected recepients</h6>
         <div class="selected-recepients row d-flex">
             <div class="col-4 fw-bold">name</div>
             <div class="col-4 fw-bold">Additional Information</div>
@@ -30,7 +30,7 @@
 
     <hr class="thick-border">
     <div class="mail-header">
-        <label class="fs-10">Template</label>
+        <label class="fs-10 fw-bold">Template</label>
         <select  style="width: 100%; height: 30px;">
             <option value="0"></option>
             <option value="1">KV Pleriniminary</option>
@@ -41,7 +41,7 @@
         </select>
     </div>
     <div class="mail-header">
-        <label class="fs-10">Regarding</label>
+        <label class="fs-10 fw-bold">Regarding</label>
         <input type="text" class="form-control" placeholder="Regarding">
     </div>
     <div class="d-flex">
@@ -147,16 +147,19 @@
         </div>
     </div>
 
-    <div class="content">
+    <div class="">
         <textarea placeholder="Compose your email here..."></textarea>
     </div>
 
-    <div class="footer">
+    
         <div>
             <input type="file" multiple id="attachmentInput">
             <div class="attachments" id="attachmentList"></div>
         </div>
-        <button class="add-btn">Submit</button>
-    </div>
+        <div>
+
+            <button class="add-btn">Submit</button>
+        </div>
+    
 
 </section>

@@ -4,7 +4,7 @@
   border: 1px solid #ccc;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   resize: both;
-  overflow: hidden;
+  overflow-y:scroll ;
   transition: all 0.3s ease;
 }
 

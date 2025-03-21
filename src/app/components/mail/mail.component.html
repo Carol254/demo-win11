@@ -1,17 +1,162 @@
-<section class="mail">
-    <div style="margin-top: 5px;">
-        <label>Email to</label>
-        <input type="text" placeholder="Search mail" />
+<section class="mail container">
+    <div class="mail-header">
+        <label class="fs-10">Email to</label>
+        <select  style="width: 100%; height: 30px;">
+            <option value="0"></option>
+            <option value="1">Intermediary</option>
+            <option value="2">Customer</option>
+            <option value="3">Company</option>
+        </select>
     </div>
-    <hr>
+    <hr class="thick-border">
     <div>
         <h5>Selected recepients</h5>
-        <div class="selected-recepients">
-            <div>name</div>
-            <div>Additional Information</div>
-            <div>Email</div>
-
-
+        <div class="selected-recepients row d-flex">
+            <div class="col-4 fw-bold">name</div>
+            <div class="col-4 fw-bold">Additional Information</div>
+            <div class="col-4 fw-bold">Email</div>
         </div>
     </div>
+    <div>
+        <div class="d-flex row">
+            <div class="col-10">
+                <input type="text" class="form-control" placeholder="Manual Receiver">
+            </div>
+            <div class="col-2 d-flex justify-content-center">
+                <button class="add-btn">+</button>
+            </div>
+        </div>
+    </div>
+
+    <hr class="thick-border">
+    <div class="mail-header">
+        <label class="fs-10">Template</label>
+        <select  style="width: 100%; height: 30px;">
+            <option value="0"></option>
+            <option value="1">KV Pleriniminary</option>
+            <option value="2">Info SUH Pilot</option>
+            <option value="3">Access is unlocked</option>
+            <option value="4">Maxpool</option>
+            <option value="5">Confirmation</option>
+        </select>
+    </div>
+    <div class="mail-header">
+        <label class="fs-10">Regarding</label>
+        <input type="text" class="form-control" placeholder="Regarding">
+    </div>
+    <div class="d-flex">
+        <div class="">
+            <button class="_btn">File <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+            </button>
+        </div>
+        <div class="">
+            <button class="_btn">Edit <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+            </button>
+        </div>
+        <div class="">
+            <button class="_btn">Opinion <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+            </button>
+        </div>
+        <div class="">
+            <button class="_btn">Format <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+            </button>
+        </div>
+        <div class="">
+            <button class="_btn">Tools <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+            </button>
+        </div>
+    </div>
+ 
+    <div class="header">
+        <div class="menu">
+            <button class="menu-button">File</button>
+            <div class="dropdown-content">
+                <a href="#">New</a>
+                <a href="#">Open</a>
+                <a href="#">Save</a>
+            </div>
+        </div>
+        <div class="menu">
+            <button class="menu-button">Edit</button>
+            <div class="dropdown-content">
+                <a href="#">Cut</a>
+                <a href="#">Copy</a>
+                <a href="#">Paste</a>
+            </div>
+        </div>
+            <div class="menu">
+            <button class="menu-button">Opinion</button>
+            <div class="dropdown-content">
+                <a href="#">Agree</a>
+                <a href="#">Disagree</a>
+                <a href="#">Neutral</a>
+            </div>
+        </div>
+        <div class="menu">
+            <button class="menu-button">Format</button>
+            <div class="dropdown-content">
+                <a href="#">Font</a>
+                <a href="#">Size</a>
+                <a href="#">Color</a>
+            </div>
+        </div>
+        <div class="menu">
+            <button class="menu-button">Tools</button>
+            <div class="dropdown-content">
+                <a href="#">Spell Check</a>
+                <a href="#">Word Count</a>
+            </div>
+        </div>
+        <div class="toolbar">
+            <button><b>B</b></button>
+            <button>Undo</button>
+            <button>Redo</button>
+            <button><i>I</i></button>
+            <button><u>U</u></button>
+            <button style="text-align: left;">Left</button>
+            <button style="text-align: center;">Center</button>
+            <button style="text-align: right;">Right</button>
+            <div class="menu">
+                <button class="menu-button">ABC <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg></button>
+                <div class="dropdown-content">
+                    <a href="#">English</a>
+                    <a href="#">Danish</a>
+                    <a href="#">Dutch</a>
+                    <a href="#">Finnish</a>
+                    <a href="#">German</a>
+                    <a href="#">Italian</a>
+                    <a href="#">Polish</a>
+                    <a href="#">Portuguese</a>
+                    <a href="#">Spanish</a>
+                    <a href="#">Swedish</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <textarea placeholder="Compose your email here..."></textarea>
+    </div>
+
+    <div class="footer">
+        <div>
+            <input type="file" multiple id="attachmentInput">
+            <div class="attachments" id="attachmentList"></div>
+        </div>
+        <button class="add-btn">Submit</button>
+    </div>
+
 </section>

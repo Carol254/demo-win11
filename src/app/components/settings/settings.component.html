@@ -1,1 +1,55 @@
-<p>settings works!</p>
+<div class="container">
+    <div class="main">
+        <h1>Settings</h1>
+        <div class="language">
+            <h5>Language</h5>
+            <p class="languageOption">
+                Let us know which language you're most comfortable using. You can change it back at any time.
+            </p>
+            <div class="language-box">
+                <select name="" id="">
+                    <option value="EN" class="option1">English</option>
+                    <option value="IT" class="option2">German</option>
+                    <option value="ES" class="option3">Polish</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="theme">
+            <div class="row">
+                <div class="col-6">
+                    <h5 >Change Theme</h5>
+                    <p>Choose the theme you would prefer.</p>
+                </div>
+                <div class="col-6">
+                    <div class="slide1">  
+                        <input type="checkbox" value="None" id="slide1" name="check" checked />
+                        <label for="slide1"></label>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="backgrounds">
+            <div class="row d-flex flex-wrap">
+                <h5 class="w-100">Personalize your app</h5>
+                @for (item of backgroundImages; track item.id) {
+                    <div class="col-md-3 col-sm-12"> 
+                        <div class="img-container">
+                            <img [src]="item.url" alt="">
+                        </div>
+                    </div>
+                } @empty {
+                    <div class="col-12">
+                        <div class="card">
+                            <p>No preview image</p>
+                        </div>
+                    </div>
+                }
+            </div>            
+        </div>
+
+
+        
+    </div>
+</div>

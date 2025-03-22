@@ -9,7 +9,7 @@ import { Constants } from '../constants';
 })
 export class SettingsComponent  implements OnInit{
 
-   icons:any = Constants.iconPaths;
+  icons:any = Constants.iconPaths;
 
   backgroundImages:any[] = [
     {
@@ -50,7 +50,7 @@ export class SettingsComponent  implements OnInit{
       
   }
 
-  loadBackgrounds(){
-
+  changeWallpaper(id:any){
+    console.log(id);
   }
 }

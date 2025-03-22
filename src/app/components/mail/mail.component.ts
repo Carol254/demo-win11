@@ -24,9 +24,7 @@ attachFiles(){
   input.type = 'file';
   input.classList.add('file-input'); 
 
-
   this.fileInputs.push(input);
-
 
   this.filesContainer.nativeElement.appendChild(input);
 }

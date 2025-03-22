@@ -4,10 +4,11 @@ import { BrokersComponent } from "../brokers/brokers.component";
 import { CustomersComponent } from '../customers/customers.component';
 import { ContractsComponent } from '../contracts/contracts.component';
 import { MailComponent } from '../mail/mail.component';
+import { SettingsComponent } from '../settings/settings.component';
 
 @Component({
   selector: 'app-window',
-  imports: [NgStyle, NgIf,NgSwitch, BrokersComponent,CustomersComponent, ContractsComponent,NgSwitchCase,NgSwitchDefault,MailComponent],
+  imports: [NgStyle, NgIf,NgSwitch, BrokersComponent,CustomersComponent, ContractsComponent,NgSwitchCase,NgSwitchDefault,MailComponent,SettingsComponent],
   templateUrl: './window.component.html',
   styleUrl: './window.component.css'
 })

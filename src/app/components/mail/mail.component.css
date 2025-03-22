@@ -141,3 +141,6 @@ input:focus , select:focus {
     display: flex;
     flex-direction: column;
 }
+.file-input{
+    padding-top: 7px;
+}

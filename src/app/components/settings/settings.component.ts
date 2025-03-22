@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Constants } from '../constants';
+import { WallpaperService } from '../../services/wallpaper.service';
 
 @Component({
   selector: 'app-settings',
@@ -44,13 +45,15 @@ export class SettingsComponent  implements OnInit{
     },
   ];
 
-  constructor(){}
+  constructor(private wallpaperService: WallpaperService){}
 
   ngOnInit(): void {
       
   }
 
-  changeWallpaper(id:any){
-    console.log(id);
+  changeWallpaper(item:any){
+    console.log(`Setting wallpaper to: ${item.imgName}`);
+    this.wallpaperService.setWallpaper(item.url);
+
   }
 }

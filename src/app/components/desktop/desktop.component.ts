@@ -5,6 +5,7 @@ import { DesktopIconsComponent } from '../desktop-icons/desktop-icons.component'
 import { Constants } from '../constants';
 import { Shortcut } from '../models';
 import { WindowComponent } from '../window/window.component';
+import { WallpaperService } from '../../services/wallpaper.service';
 
 @Component({
   selector: 'app-desktop',
@@ -20,15 +21,19 @@ export class DesktopComponent implements OnInit {
     console.log('on right click event = ', e);
   }
 
+  wallpaper: string = '';
+
   icons:any = Constants.iconPaths;
-  wallpaper:string = this.icons.desktop.DEFAULT_WALLPAPER;
   initialShortcuts:Array<Shortcut>=[];
 
 
-  constructor() { }
+  constructor(private wallpaperService: WallpaperService ) { }
 
   ngOnInit(): void {
     this.loadShortcutIcons();
+    this.wallpaperService.currentWallpaper.subscribe((url) => {
+      this.wallpaper = url;
+    });
   }
 
   loadShortcutIcons() {

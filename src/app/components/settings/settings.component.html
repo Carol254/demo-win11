@@ -36,7 +36,7 @@
                 @for (item of backgroundImages; track item.id) {
                     <div class="col-md-3 col-sm-12"> 
                         <div class="img-container">
-                            <img [src]="item.url" alt="" (click)="changeWallpaper(item.id)">
+                            <img [src]="item.url" alt="item.imgName" (click)="changeWallpaper(item)">
                         </div>
                     </div>
                 } @empty {

@@ -1,21 +1,33 @@
 .window {
   position: absolute;
   background: white;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
   resize: both;
-  overflow-y:scroll ;
-  transition: all 0.3s ease;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .window-header {
   background: #0078d7;
   color: white;
-  padding: 5px;
+  padding: 10px 15px;
+  font-weight: bold;
   cursor: grab;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.window-controls {
+  display: flex;
+  gap: 5px;
 }
 
 .window-controls button {
@@ -24,11 +36,20 @@
   color: white;
   font-size: 16px;
   cursor: pointer;
-  padding: 0 5px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  transition: background 0.2s ease-in-out;
 }
 
 .window-controls button:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
 }
+
+.window-body {
+  padding: 15px;
+  height: calc(100% - 40px); 
+  overflow: auto;
+}
+
 
   

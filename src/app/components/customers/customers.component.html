@@ -1,39 +1,26 @@
 <h2>Customer List</h2>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <table  class="table table-bordered table-hover dt-responsive">
-
-        <thead>
-            <tr>
-                <th><strong>FirstName</strong></th>
-                <th><strong>LastName</strong></th>
-                <th><strong>Phone</strong></th>
-                <th><strong>Email</strong></th>
-                <th><strong>Iban</strong></th>
-                <th><strong>Address</strong></th>
-              </tr>
-        </thead>
-        <tbody>
-            @for (customer of customers ;track customer.id){
-                <tr>
-                    <td>{{customer.firstName}}</td>
-                    <td>{{customer.lastName}}</td>
-                    <td>{{customer.phone}}</td>
-                    <td>{{customer.email}}</td>
-                    <td>{{customer.bank.iban}}</td>
-                    <td>{{customer.address.address}}</td>
-                  </tr>
-            }
-     
-        </tbody>
-        <tfoot>
-         
-        </tfoot>
-      </table>
-    </div>
-  </div>
+<div class="table-container">
+  <table class="customer-table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (customer of customers; track customer.id) {
+        <tr>
+          <td>{{ customer.firstName }}</td>
+          <td>{{ customer.lastName }}</td>
+          <td>{{ customer.phone }}</td>
+          <td>{{ customer.email | truncate:15 }}</td>
+          <td>{{ customer.address.address }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
 </div>
-
-

@@ -74,7 +74,7 @@ export class WindowComponent {
       this.positionY = 50;
     } else {
       this.width = window.innerWidth;
-      this.height = window.innerHeight - 50; 
+      this.height = window.innerHeight - 40; 
       this.positionX = 0;
       this.positionY = 0;
     }

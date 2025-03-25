@@ -17,7 +17,7 @@
           <td>{{ customer.lastName }}</td>
           <td>{{ customer.phone }}</td>
           <td>{{ customer.email | truncate:15 }}</td>
-          <td>{{ customer.address.address }}</td>
+          <td>{{ customer.address.address | truncate:10 }}</td>
         </tr>
       }
     </tbody>

@@ -18,8 +18,12 @@ export class WindowComponent {
   @Output() bringToFront = new EventEmitter<void>();
   @Output() minimize = new EventEmitter<void>();
 
+
+  // Controls the window location of the screen
   positionX = Math.random() * 200 + 100;
   positionY = Math.random() * 100 + 50;
+
+
   width = 300;
   height = 200;
   isDragging = false;
@@ -28,13 +32,19 @@ export class WindowComponent {
   isMaximized = false;
   isMinimized = false;
 
+
+  // This ensures the window stops following the cursor when you release the button
   @HostListener('document:mouseup', ['$event'])
   onMouseUp() {
     this.isDragging = false;
   }
 
   startDragging(event: MouseEvent) {
-    if (this.isMaximized) return;
+    // Do not allow dragging if maxmized
+    if (this.isMaximized) return; 
+
+    // event.clientX and event.clientY get the cursor's current position.
+    // offsetX and offsetY store how far the click was from the top-left of the window.
     this.isDragging = true;
     this.offsetX = event.clientX - this.positionX;
     this.offsetY = event.clientY - this.positionY;

@@ -89,9 +89,11 @@ export class DesktopComponent implements OnInit {
 
   
   openWindow(shortcut: any) {
+     // Check if a window with the given shortcut ID is already open
     const existingWindow = this.openWindows.find(win => win.id === shortcut.id);
 
     if (!existingWindow) {
+       // If the window does not exist, create and add a new window object
       this.openWindows.push({
         id: shortcut.id,
         title: shortcut.title,
@@ -100,6 +102,7 @@ export class DesktopComponent implements OnInit {
         isMinimized: false
       });
     } else {
+      // If the window already exists, bring it to the front
       existingWindow.zIndex = this.zIndexCounter++;
       existingWindow.isMinimized = false;
     }

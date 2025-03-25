@@ -13,12 +13,7 @@ export class DesktopIconsComponent  implements OnInit {
 
   icons:any = Constants.iconPaths;
 
-  @Input() shortcuts:Array<Shortcut> = [
-    {
-      url:this.icons.common.EDGE_BROWSER,
-      title:'Edge'
-    }
-  ];
+  @Input() shortcuts:Array<Shortcut> = [];
 
 
   @Output() open = new EventEmitter<any>();
